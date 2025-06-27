@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  background-color: black;
+}
+
+.Navbar {
+  background-color: rgba(15, 15, 15, 0.7); /* semi-transparent dark */
+  backdrop-filter: blur(6px);               /* optional: glassy effect */
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: flex-end;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.Logo{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: left;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    height: 48px;
+    justify-content: flex-end;
+}
+
+.LogoInterview {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.LogoPrep {
+  font-size: 1rem;
+  color: #888;
+  align-self: flex-end; 
+  margin-top: 2px;
+}
+
+.NavLinks{
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.Home{
+    margin-left: 280px;
+}
+
+.Products{
+    margin-left: 280px;
+}
+
+.Topics{
+    margin-left: 280px;
+    margin-bottom: 30px;
+}
+
+.Home a{
+    text-decoration: none;
+     color:white;
+  transition: color 0.3s ease;
+}
+
+.Home a:hover {
+  color: #a3a3a3; 
+}
+
+.Products a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.Products a:hover {
+  color: #a3a3a3; 
+}
+
+.Topics a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    
+}
+
+.Topics a:hover {
+  color: #a3a3a3; 
+}
+
+.Dropdown {
+    color: white;
+    margin-left: 250px;
+    padding-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.Dropdown li:hover {
+  color: #a3a3a3; 
+}
+
+.Dropdown li {
+  list-style: none;
+}
+
+.Navbar .dropdown-menu {
+  background-color: #000 !important;
+  border: 1px solid #444 !important;
+}
+
+.Navbar .dropdown-menu .dropdown-item {
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+
+.Navbar .dropdown-menu .dropdown-item:hover {
+  background-color: white;
+  color: black!important;
+}
