@@ -15,7 +15,7 @@ const ReactDrop = () => {
 
   const fetchQuestion = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/question?topic=React");
+      const res = await fetch("https://interview-preparation1.onrender.com/api/question?topic=React");
       const data = await res.json();
       setQuestion(data.question);
       setAnswer("");
@@ -31,7 +31,7 @@ const ReactDrop = () => {
     if (!answer.trim()) return;
 
     try {
-      const res = await fetch("http://localhost:5000/api/evaluate", {
+      const res = await fetch("https://interview-preparation1.onrender.com/api/evaluate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question, answer }),
