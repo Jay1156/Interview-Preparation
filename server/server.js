@@ -6,13 +6,18 @@ import axios from 'axios';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 // OpenRouter configuration
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const MODEL = 'mistralai/mistral-7b-instruct';
+
+// Optional: Root route for health check
+app.get('/', (req, res) => {
+  res.send('Server is running! Use /api/question or /api/evaluate.');
+});
 
 // 🔹 Route: Generate a clean JavaScript interview question
 app.get('/api/question', async (req, res) => {
