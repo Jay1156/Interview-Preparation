@@ -19,7 +19,7 @@ const Product = () => {
   const fetchQuestion = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/question");
+      const res = await fetch("https://interview-preparation1.onrender.com/api/question");
       const data = await res.json();
       setQuestion(data.question);
       setAnswer("");
@@ -36,7 +36,7 @@ const Product = () => {
     if (!answer.trim()) return;
 
     try {
-      const res = await fetch("http://localhost:5000/api/evaluate", {
+      const res = await fetch("https://interview-preparation1.onrender.com/api/evaluate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question, answer }),
